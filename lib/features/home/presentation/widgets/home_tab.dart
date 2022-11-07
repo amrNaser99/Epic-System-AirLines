@@ -10,11 +10,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class HomeTab extends StatelessWidget {
   final AsyncSnapshot<ConnectivityResult>? snapshot;
 
-  const HomeTab({Key? key, required this.snapshot}) : super(key: key);
+  const HomeTab({
+    Key? key,
+    required this.snapshot,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if(snapshot?.data != ConnectivityResult.none){
+    if (snapshot?.data != ConnectivityResult.none) {
       return BlocConsumer<AppCubit, AppState>(
         listener: (context, state) {
           if (state is AddFavoriteSuccess) {
@@ -27,9 +30,12 @@ class HomeTab extends StatelessWidget {
           }
         },
         builder: (context, state) {
-          return ConditionalBuilder(
+          return
+            ConditionalBuilder(
             condition: AppCubit.get(context).airlineList!.isNotEmpty,
-            builder: (context) => ListView.separated(
+            builder: (context) =>
+                ListView.separated(
+                  shrinkWrap: true,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) => BuildAirlineItem(
                   airlineItem: AppCubit.get(context).airlineList![index]),

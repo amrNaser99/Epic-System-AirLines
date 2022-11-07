@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_spaces.dart';
-import '../../../../services/network/end_points.dart';
+import '../../../../services/network/api_service/end_points.dart';
 
 class AirlineDetailsScreen extends StatelessWidget {
   final AirLineModel airlineModel;

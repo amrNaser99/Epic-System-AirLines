@@ -3,10 +3,9 @@ import 'package:airline/core/utils/app_spaces.dart';
 import 'package:airline/core/utils/font_styles.dart';
 import 'package:airline/features/home/models/airline_model.dart';
 import 'package:airline/features/home/presentation/bloc/app_cubit.dart';
-import 'package:airline/services/network/end_points.dart';
+import 'package:airline/services/network/api_service/end_points.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/routes.dart';
 import '../airline_details/airline_details.dart';
 
 class BuildAirlineItem extends StatelessWidget {

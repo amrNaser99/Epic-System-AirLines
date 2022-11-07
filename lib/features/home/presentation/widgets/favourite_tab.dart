@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
 
+
 class FavouriteTab extends StatelessWidget {
   final AsyncSnapshot<ConnectivityResult>? snapshot;
 

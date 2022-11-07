@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
+
+
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
@@ -36,19 +38,21 @@ class HomeScreen extends StatelessWidget {
                     labelPadding: const EdgeInsets.symmetric(horizontal: 5.0),
                   ),
                 ),
-                body:  Padding(
+                body: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: TabBarView(children: [
                     HomeTab(snapshot: snapshot),
                     FavouriteTab(snapshot: snapshot),
                   ]),
                 ),
-              ),
+
+
+                ),
             );
           },
         );
       },
-
     );
   }
 }
+
